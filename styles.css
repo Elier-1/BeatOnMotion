@@ -17,18 +17,19 @@ html {
     /* The image used */
     background-image: url("/imgs/marinaPIc.jpg");
 
+
     /* Full height */
     height: auto;
 
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .self {
-    height: 600px;
-    border-radius: 60%;
+    height: 500px;
+    border-radius: 80%;
 }
 
 /* Position text in the middle of the index page*/
