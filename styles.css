@@ -2,7 +2,7 @@ body,
 html {
     height: 100%;
     margin: 0px;
-    font-family: 'UniqueRegular';
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: #f1f1f1;
@@ -15,7 +15,8 @@ html {
 
 .bg-image {
     /* The image used */
-    background-image: url("/imgs/marinaPIc.jpg");
+    background-color: black;
+    background-image: url("/imgs/");
 
 
     /* Full height */
@@ -36,7 +37,7 @@ html {
 .bg-text {
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.627);
     /* Black w/opacity/see-through */
     color: white;
     font-weight: bold;
@@ -46,7 +47,7 @@ html {
     /* Y axis*/
     left: 50%;
     /* x axis*/
-    transform: translate(-30%, -70%);
+    transform: translate(-10%, -70%);
     /*10 x axis 90 y axis*/
     z-index: 0;
     width: 50%;
@@ -68,19 +69,19 @@ html {
 
 #about {
     top: 42vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
 }
 
 .about-text {
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.907);
     /* Black w/opacity/see-through */
-    color: white;
+    color: rgb(191, 207, 214);
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 50%;
+    top: 40%;
     /* Y axis*/
     left: 50%;
     /* x axis*/
@@ -92,17 +93,17 @@ html {
 
 #projects {
     top: 48vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
 }
 
 #home {
     top: 54vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
 }
 
 #contact {
     top: 60vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
 }
 
 .footer {
@@ -133,7 +134,7 @@ html {
 .fa-linkedin {
     background: #007bb5;
     color: white;
-  }
+}
 
 .fa {
     padding: 10px;
