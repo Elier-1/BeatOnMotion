@@ -32,13 +32,6 @@ a {
 }
 
 /*main Section*/
-#main {
-    background-image: url('/img/antonioArianna.jpg');
-    background-size: cover;
-    background-position: top center;
-    position: relative;
-    z-index: 1;
-}
 
 #main::after {
     content: '';
