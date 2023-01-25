@@ -1,151 +1,225 @@
-body,
-html {
-    height: 100%;
-    margin: 0px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: #f1f1f1;
-    font-size: 19px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 * {
+    padding: 0;
+    margin: 20;
     box-sizing: border-box;
 }
 
-.bg-image {
-    /* The image used */
-    background-color: black;
-    background-image: url("/imgs/");
-
-
-    /* Full height */
-    height: auto;
-
-    /* Center and scale the image nicely */
-    background-position: left;
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('/img/8.png');
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.self {
-    height: 500px;
-    border-radius: 80%;
-}
-
-/* Position text in the middle of the index page*/
-.bg-text {
+    background-size: contain;
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.627);
-    /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 70%;
-    /* Y axis*/
-    left: 50%;
-    /* x axis*/
-    transform: translate(-10%, -70%);
-    /*10 x axis 90 y axis*/
-    z-index: 0;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
+
 }
 
-
-#mySidenav a {
-    /*The nav bar*/
-    position: absolute;
-    padding: 15px;
-    width: 100px;
+a {
     text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 0 10px 10px 0;
+
+
 }
 
-#about {
-    top: 42vh;
-    background-color: rgb(0, 0, 0);
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-text {
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.907);
-    /* Black w/opacity/see-through */
-    color: rgb(191, 207, 214);
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
+/*main Section*/
+#main {
+    background-image: url('/img/antonioArianna.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#main::after {
+    content: '';
     position: absolute;
-    top: 40%;
-    /* Y axis*/
-    left: 50%;
-    /* x axis*/
-    transform: translate(-50%, -40%);
-    /*10 x axis 90 y axis*/
-    width: 80%;
-    text-align: left;
-}
-
-#projects {
-    top: 48vh;
-    background-color: rgb(0, 0, 0);
-}
-
-#home {
-    top: 54vh;
-    background-color: rgb(0, 0, 0);
-}
-
-#contact {
-    top: 60vh;
-    background-color: rgb(0, 0, 0);
-}
-
-.footer {
-    position: fixed;
     left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*This gives oppacity to avatar pic*/
+    background-color: black;
+    opacity: .2;
+    z-index: -1;
+}
+
+#main .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#main h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1ss;
+}
+
+#main h1:nth-child(1) {
+    animation-delay: .5s;
+}
+
+#main h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+#main h1:nth-child(3) {
+    animation-delay: 3.5s;
+}
+
+#main h1:nth-child(4) {
+    animation-delay: 4.5s;
+}
+
+#main h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(78, 13, 200, 0.605);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#main h1:nth-child(1) span {
+    animation-delay: 1s;
+}
+
+#main h1:nth-child(2) span {
+    animation-delay: 2s;
+}
+
+#main h1:nth-child(3) span {
+    animation-delay: 3s;
+}
+
+#main .cta {
+    /*This design the class cta for portfolio*/
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+
+}
+
+#main .cta:hover {
+    color: whitesmoke;
+    background-color: rgb(89, 8, 240);
+}
+
+/*End main Section*/
+
+/* keyframes */
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+/* End keyframes */
+
+/*Div relative*/
+div.relative {
+    opacity: .8;
+    background-position: center right;
+    width: 70%;
+    height: 925px;
+}
+
+img {
+    float: right;
+    object-fit: auto;
+    border-radius: 50px;
+
+}
+
+h2 {
+    color: rgb(252, 252, 252);
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    font-size: 4rem;
+    text-decoration-color: rgba(223, 6, 191, 0.777);
+    
+}
+
+/*End Div relative*/
+
+
+/*Parragraph*/
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(142, 142, 142);
+    padding: 5px;
+}
+/*End Parragraph*/
+
+
+/*Nav Bar*/
+.navbar {
+    overflow: hidden;
+    
+    position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
+  }
+  
+  .navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
-
-.fa-instagram {
-    background: #125688;
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-
-.fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 40px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 100%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
+    padding: 14px 16px;
+    font-size: 2rem;
+  }
+  
+  .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar a.active {
+    color: rgb(255, 255, 255);
+  }
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+/*Nav Bar*/
